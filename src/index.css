@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .theme-switcher {
+    @apply h-5 w-6 p-[3px] rounded-full bg-dark-100 dark:bg-primary-100 text-light-100 flex items-center justify-center ease-in-out delay-100
+  }
+
+  .form-label {
+    @apply text-dark-200 dark:text-gray-300 uppercase text-xs font-medium
+  }
+
+  .form-input {
+    @apply bg-gray-100 dark:bg-dark-200 text-dark-200 dark:text-white rounded-full pl-5 outline-none border-2 border-gray-200 dark:border-dark-100
+  }
+}
