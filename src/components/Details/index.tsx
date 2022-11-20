@@ -18,7 +18,7 @@ const Details = () => {
             name="age"
             className="form-input text-sm w-24 py-1"
             defaultValue={data.age}
-            onChange={(e) => setChunk({ age: parseInt(e.target.value) })}
+            onChange={(e) => setChunk({ age: e.target.value })}
           >
             {ageList.map((age) => (
               <option key={age} value={age}>
