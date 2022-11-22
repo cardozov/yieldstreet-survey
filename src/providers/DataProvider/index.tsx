@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react'
 import { GENDER_MAP } from '../../constants'
+import StorageService from '../../services/StorageService'
 
 type DataProviderType = {
   data: Partial<SurveyData>;
@@ -18,10 +19,13 @@ export type SurveyData = {
 export const DataContext = createContext({} as DataProviderType)
 
 export const DataProvider = ({ children }: React.Provider<DataProviderType> & any) => {
-  const [data, setData] = useState({} as Partial<SurveyData>)
+  const { getData, setData: setPersistentData } = StorageService()
+  const [data, setData] = useState(getData().data as Partial<SurveyData>)
 
-  const setChunk = (chunk: Partial<SurveyData>) =>
+  const setChunk = (chunk: Partial<SurveyData>) => {
     setData(prev => ({ ...prev, ...chunk }))
+    setPersistentData({ ...data, ...chunk })
+  }
 
   return (
     <DataContext.Provider value={{ data, setChunk }}>{children}</DataContext.Provider>

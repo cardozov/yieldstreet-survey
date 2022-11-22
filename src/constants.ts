@@ -1,5 +1,7 @@
 export const STEP_COUNT = 4;
 
+export const LOCALSTORAGE_KEY = "@yieldstreet-survey";
+
 export const GENDER_MAP = [
   { description: "Male", id: "male" },
   { description: "Female", id: "female" },
