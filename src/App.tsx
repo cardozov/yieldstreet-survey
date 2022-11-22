@@ -1,6 +1,6 @@
-import { DataProvider } from './providers/DataProvider'
-import { SurveyProvider } from './providers/SurveyProvider'
-import Survey from './components/Survey'
+import { DataProvider } from "./providers/DataProvider";
+import { SurveyProvider } from "./providers/SurveyProvider";
+import Survey from "./components/Survey";
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
         <Survey />
       </SurveyProvider>
     </DataProvider>
-  )
-}
+  );
+};
 
-export default App
+export default App;

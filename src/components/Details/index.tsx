@@ -47,7 +47,9 @@ const Details = () => {
                   className="w-6 accent-primary-100 dark:accent-primary-200 "
                   defaultChecked={id === data.gender?.id}
                 />
-                <label htmlFor={id} className="dark:text-light-100">{description}</label>
+                <label htmlFor={id} className="dark:text-light-100">
+                  {description}
+                </label>
               </div>
             ))}
           </div>

@@ -14,9 +14,7 @@ const Summary = () => {
     value?: string | JSX.Element | JSX.Element[];
   }) => (
     <tr className="bg-white dark:bg-gray-800">
-      <th
-        className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-      >
+      <th className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
         {description}
       </th>
       <td className="py-4 px-6">{value}</td>
@@ -51,7 +49,9 @@ const Summary = () => {
             <TableRow description="Favorite Book" value={data.favoriteBook} />
             <TableRow
               description="Favorite Colors"
-              value={data.favoriteColors?.map(c => <Chip key={c} color={c} />)}
+              value={data.favoriteColors?.map((c) => (
+                <Chip key={c} color={c} />
+              ))}
             />
           </tbody>
         </table>

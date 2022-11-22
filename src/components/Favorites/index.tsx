@@ -20,7 +20,7 @@ const Favorites = () => {
         />
         <LabeledFormItem name="favorite-colors" label="Favorite Colors">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-2 gap-x-5 sm:gap-x-12">
-            {COLORS_MAP.map(props => (
+            {COLORS_MAP.map((props) => (
               <CheckColor key={props.color} {...props} />
             ))}
           </div>

@@ -45,7 +45,7 @@ export const SurveyProvider = ({
   const openSurvey = () => {
     if (getData().submitted) return;
     setOpen(true);
-  }
+  };
 
   return (
     <SurveyContext.Provider
